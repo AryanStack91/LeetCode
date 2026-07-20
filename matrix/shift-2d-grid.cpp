@@ -10,7 +10,7 @@ public:
                 ans.push_back(grid[i][j]);
             }
         }
-
+        k = k % ans.size();
         reverse(ans.begin(), ans.end());
         reverse(ans.begin(), ans.begin() + k);
         reverse(ans.begin() + k, ans.end());
