@@ -4,7 +4,7 @@ public:
 
         int x = needle.size();
         for (int i = 0; i < s.length(); i++) {
-            string st = s.substr(i , i + x);
+            string st = s.substr(i , x);
             if (st.find(needle) != string ::npos) {
                 return i;
             }
