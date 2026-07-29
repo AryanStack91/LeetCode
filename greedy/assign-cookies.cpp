@@ -1,7 +1,7 @@
 class Solution {
 public:
     int findContentChildren(vector<int>& g, vector<int>& s) {
-        if(s.size() == 0){
+        if (s.size() == 0) {
             return 0;
         }
         int ans = 0;
@@ -18,6 +18,9 @@ public:
                 }
             }
             s.erase(s.begin() + x);
+            if (s.size() == 0) {
+                return ans;
+            }
         }
         return ans;
     }
