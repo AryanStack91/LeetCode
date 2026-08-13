@@ -9,6 +9,7 @@ public:
             } else {
                 if (cash < i - 5)
                     return false;
+                if(i < 20)
                 cash += 5;
                 cash -= (i - 5);
             }
