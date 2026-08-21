@@ -5,7 +5,12 @@ public:
             return 0;
         }
         sort(nums.begin(),nums.end());
-        return nums[nums.size() - 1] - nums[nums.size() - 2];
+        int ans = 0;
+        for(int i = 1;i < nums.size(); i++){
+            int diff = nums[i] - nums[i - 1];
+            ans = max(ans,diff);
+        }
+        return ans;
         
     }
 };
